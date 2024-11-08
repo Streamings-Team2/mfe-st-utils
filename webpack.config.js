@@ -9,7 +9,7 @@ const printCompilationMessage = require('./compilation.config.js');
 
 module.exports = (_, argv) => ({
   output: {
-    publicPath: "http://localhost:4214/",
+    publicPath: "http://localhost:4211/",
   },
 
   resolve: {
@@ -17,7 +17,7 @@ module.exports = (_, argv) => ({
   },
 
   devServer: {
-    port: 4214,
+    port: 4211,
     historyApiFallback: true,
     watchFiles: [path.resolve(__dirname, 'src')],
     onListening: function (devServer) {
@@ -65,7 +65,7 @@ module.exports = (_, argv) => ({
       name: "mfe_st_utils",
       filename: "remoteEntry.js",
       remotes: {},
-      exposes: {},
+      exposes: {'./Utils': './src/components/Utils.tsx'},
       shared: {
         ...deps,
         react: {
