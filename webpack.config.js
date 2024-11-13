@@ -68,7 +68,7 @@ module.exports = (_, argv) => ({
       exposes: {
         './Utils': './src/components/Utils.tsx',
         './Getters': './src/utils/getters.ts',
-        './AIRLINES': './src/constants/airline.constant.ts'
+        './CONSTANTS': './src/constants/filters.constant.ts'
       },
       shared: {
         ...deps,
