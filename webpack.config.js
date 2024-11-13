@@ -65,7 +65,10 @@ module.exports = (_, argv) => ({
       name: "mfe_st_utils",
       filename: "remoteEntry.js",
       remotes: {},
-      exposes: {'./Utils': './src/components/Utils.tsx'},
+      exposes: {
+        './Utils': './src/components/Utils.tsx',
+        './Getters': './src/utils/getters.ts'
+      },
       shared: {
         ...deps,
         react: {
