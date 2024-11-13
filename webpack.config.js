@@ -67,7 +67,8 @@ module.exports = (_, argv) => ({
       remotes: {},
       exposes: {
         './Utils': './src/components/Utils.tsx',
-        './Getters': './src/utils/getters.ts'
+        './Getters': './src/utils/getters.ts',
+        './AIRLINES': './src/constants/airline.constant.ts'
       },
       shared: {
         ...deps,
