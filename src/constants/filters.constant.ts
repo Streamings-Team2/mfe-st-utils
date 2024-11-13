@@ -28,6 +28,8 @@ const STATES = [
   },
 ];
 
-const CONSTANTS = { AIRLINES, STATES };
+const URL: string = "https://64c3f84c67cfdca3b660848e.mockapi.io/flight";
+
+const CONSTANTS = { AIRLINES, STATES, URL };
 
 export default CONSTANTS;
