@@ -12,8 +12,6 @@ export const getPagination = (
     itemsPerPage: number = 10,
     pageRangeDisplayed: number = 5
   ): PaginationData => {
-    console.log({currentPageC, totalItems})
-  
     const totalPages = Math.ceil(totalItems / itemsPerPage);
     const clampedCurrentPage = Math.max(1, Math.min(currentPageC, totalPages));
     
