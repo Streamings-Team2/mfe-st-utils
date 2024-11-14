@@ -6,7 +6,8 @@
     "build:dev": "webpack --mode development",
     "build:start": "cd dist && PORT=4211 npx serve",
     "start": "webpack serve --mode development",
-    "start:live": "webpack serve --mode development --live-reload --hot"
+    "start:live": "webpack serve --mode development --live-reload --hot",
+    "test": "jest"
   },
   "license": "MIT",
   "author": {
@@ -33,7 +34,10 @@
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.3.1",
     "dotenv-webpack": "^8.0.1",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.1",
+    "jest": "^27.0.0",
+    "ts-jest": "^27.0.0",
+    "@types/jest": "^27.0.0"
   },
   "dependencies": {
     "react": "^18.2.0",
