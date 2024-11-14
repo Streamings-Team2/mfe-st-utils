@@ -1,4 +1,4 @@
-const AIRLINES = [
+export const AIRLINES = [
   {
     id: 1,
     name: "Avianca",
@@ -13,7 +13,7 @@ const AIRLINES = [
   },
 ];
 
-const STATES = [
+export const STATES = [
   {
     id: 1,
     state: "EN HORARIO",
@@ -28,7 +28,7 @@ const STATES = [
   },
 ];
 
-const URL: string = "https://64c3f84c67cfdca3b660848e.mockapi.io/flight";
+export const URL: string = "https://64c3f84c67cfdca3b660848e.mockapi.io/flight";
 
 const CONSTANTS = { AIRLINES, STATES, URL };
 

@@ -1,4 +1,5 @@
 export function restGet(url: string) {
+  console.log(url)
   return fetch(url, { method: "GET" }).then((response) => {
     if (!response.ok) {
       throw new Error(`Error de red: ${response.status}`);
