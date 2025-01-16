@@ -12,6 +12,7 @@ module.exports = (_, argv) => {
   const publicPath = isProduction
     ? process.env.PUBLIC_PATH_PRODUCTION
     : process.env.PUBLIC_PATH_DEVELOPMENT;
+  process.env.CRYPTO_KEY;
 
   return {
     output: {
@@ -72,10 +73,11 @@ module.exports = (_, argv) => {
         filename: "remoteEntry.js",
         remotes: {},
         exposes: {
-          "./Getters": "./src/utils/getters.ts",
+          "./Getters": "./src/utils/api/getters.ts",
           "./CONSTANTS": "./src/constants/filters.constant.ts",
-          "./Pagination": "./src/utils/pagination.ts",
-          "./InfoData": "./src/utils/infoData.ts",
+          "./Pagination": "./src/utils/table/pagination.ts",
+          "./InfoData": "./src/utils/data/infoData.ts",
+          "./Crypto": "./src/utils/security/crypto.ts",
         },
         shared: {
           ...deps,
