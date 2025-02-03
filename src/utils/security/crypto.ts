@@ -7,8 +7,12 @@ export const encrypt = (data: string): string => {
 };
 
 export const decrypt = <T>(data: string): T | null => {
-  const decryptedValue = AES.decrypt(data, CRYPTO_KEY).toString(enc.Utf8);
-  return JSON.parse(decryptedValue) as T;
+  try {
+    const decryptedValue = AES.decrypt(data, CRYPTO_KEY).toString(enc.Utf8);
+    return decryptedValue ? (JSON.parse(decryptedValue) as T) : null;
+  } catch (error) {
+    return null;
+  }
 };
 
 const cryptoFunctions = {
